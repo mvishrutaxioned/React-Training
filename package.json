@@ -1,25 +1,39 @@
 {
-  "name": "react-webpack",
-  "version": "1.0.0",
-  "description": "React Webpack Starter",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Vishrut Margam",
-  "license": "ISC",
+  "name": "my-react-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.3",
-    "babel-preset": "^1.1.7",
-    "babel-preset-env": "^1.7.0",
-    "html-webpack-plugin": "^5.5.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

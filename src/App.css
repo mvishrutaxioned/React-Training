@@ -1,0 +1,271 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button { cursor: pointer; }
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  background: #e7e9c8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+/* Common styling */
+.grey { color: #666; }
+.cap { text-transform: capitalize; }
+.up { text-transform: uppercase; }
+.center { text-align: center; }
+.bold { font-weight: bold; }
+.transition { transition: 1s all ease; }
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1350px;
+}
+/*=================================
+  main styling starts here
+=================================*/
+
+
+
+.App,
+form div {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  width: 100%;
+  padding-bottom: 15px;
+  margin: 10px 0;
+  align-items: flex-start;
+  position: relative;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+form input {
+  width: 80%;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.error {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f74b4b;
+}
+
+form button {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto;
+  border: none;
+  background: #2b82e6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  outline: none;
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+form button:hover { background: #1b5292; }
+
+ul {
+  width: 95%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+}
+
+ul li {
+  width: 18%;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+ul li > a:hover { color: #2b82e6 }
+
+ul li figure {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul li h2 { margin-top: 20px; }
+
+.events {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.events a {
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: #2b82e6;
+  color: #fff;
+  transition: .5s ease;
+}
+
+.events a:nth-child(2) { background: #f74b4b; }
+
+.events a:hover { background-color: #7ab2f3; }
+.events a:nth-child(2):hover { background-color: #f38484; }
+
+.editImg {
+  width: 200px;
+  width: 200px;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+  ul li { width: 25%; }
+}
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+  form { width: 40%; }
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+  ul li { width: 40%; }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  ul li { width: 80%; }
+}
